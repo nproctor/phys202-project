@@ -1,0 +1,57 @@
+<center><table width=600>
+    <tr> 
+        <th width = 12%></th>
+        <th width = 30%> Diagram Equations </th>
+        <th width = 30%> Partial Derivatives</th>
+        <th width = 30%></th>
+    </tr>
+    <tr>
+        <td> <center> $\hat{y}$ </center></td>
+        <td> $\hat{y}=\sigma(N)$ </td>
+        <td> $\frac{\partial\hat{y}}{\partial N} = \sigma\prime(N) $</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><center> N </center></td>
+        <td>$ N = \sigma(N) \times w3 $</td>
+        <td> $ \frac{\partial N}{\partial M} = \sigma\prime(M) \times w_3 $ </td>
+        <td> $ \frac{\partial N}{\partial w_3} = \sigma(M) $</td>
+    </tr>
+    <tr>
+        <td> <center> M </center></td>
+        <td>$ M = \sigma(L) \times w2 $ </td>
+        <td> $ \frac{\partial M}{\partial L} = \sigma\prime(L) \times w_2 $</td>
+        <td> $ \frac{\partial M}{\partial w_2} = \sigma(L) $</td>
+    </tr>
+    <tr>
+        <td> <center> L </center></td>
+        <td>$ L = K \times w1 $ </td>
+        <td> $ \frac{\partial L}{\partial w_1} = K $</td>
+        <td></td>
+    </tr>
+
+    </table></center>
+<br>
+
+<center><table width=850>
+    <tr>
+        <th width=5%></th>
+        <th width=35%>Gradients with Chain Rule</th>
+        <th width=55%>Gradients with Substitution</th>
+    </tr>
+    <tr>
+        <th> $w_3$ </th>
+        <td> $ \frac{\partial{C}}{\partial{w_3}} = -(y-\hat{y}) \frac{\partial{\hat{y}}}{\partial{N}} \frac{\partial{N}}{\partial{w_3}}$</td>
+        <td>$ \frac{\partial{C}}{\partial{w_3}} = -(y - \hat{y}) \times \sigma \prime(N) \times \sigma(M) $ </td>
+    </tr>
+    <tr>
+        <th> $w_2$ </th>
+        <td> $ \frac{\partial{C}}{\partial{w_2}} = -(y-\hat{y}) \frac{\partial{\hat{y}}}{\partial{N}} \frac{\partial{N}}{\partial{M}} \frac{\partial{M}}{\partial{w_2}}$ </td>
+        <td> $ \frac{\partial{C}}{\partial{w_2}} = -(y-\hat{y}) \times \sigma\prime(N) \times \sigma\prime(M) \times w_3 \times \sigma(L) $ </td>
+    </tr>
+    <tr>
+        <th> $w_3$ </th>
+        <td> $\frac{\partial{C}}{\partial{w_1}} = -(y-\hat{y}) \frac{\partial{\hat{y}}}{\partial{N}} \frac{\partial{N}}{\partial{M}} \frac{\partial{M}}{\partial{L}} \frac{\partial{L}}{\partial{w_1}}$ </td>
+        <td> $ \frac{\partial{C}}{\partial{w_1}} = -(y-\hat{y}) \times \sigma\prime(N) \times \sigma\prime(M) \times w_3 \times \sigma\prime(L) \times w_2 \times K $ </td>
+    </tr> 
+    </table></center>
